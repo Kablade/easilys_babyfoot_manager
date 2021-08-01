@@ -1,2 +1,65 @@
-# easilys_babyfoot_manager
-Technical test for Easilys
+# Babyfoot Manager - Easilys
+
+This project was realized within the framework of a technical test for the company Easilys, having for goal to set up a platform of "management" for games of table soccer.
+
+## Technical subject
+The goal was to create a management website for collaborative table soccer games
+
+The features were :
+- Be able to create a game 
+- Be able to delete a game 
+- Be able to end a game 
+- In the list, differentiate the finished games from the others 
+- Have a counter of the unfinished games 
+- For each modification, creation or deletion, there must be a propagation in real time on the 
+other connected clients 
+
+The prerequisites were :
+- Using NodeJS 
+- PostgreSQL
+- No ORM 
+- Mac, Linux or Windows (in my case it will be Windows)
+- Client-side JavaScript without frameworks or libraries (no jQuery, Vue, Angular, React) 
+- Use of client-side libraries is allowed (but not required) for: 
+- Date management 
+- Websockets management 
+- No identification to access the application 
+- No page reloading on use, it's real time 
+
+A suggested mockup was (the chat was a bonus if I had enough time) : 
+![image](https://user-images.githubusercontent.com/44434162/127775285-b0628140-84ae-4fec-9604-32d4d50da130.png)
+
+---- 
+To be able to achieve the required goal I used POSTGRESQL to store the data of each part in a database. Node.JS was used as a bridge between the database and the user interface. 
+
+To allow a user to be on the site without any reloading I used the Ajax protocol and the authorized library WebSocket.io
+
+## Installation
+Steps to reproduce my realization : 
+1. Clone this repository on your computer on a folder named Easilys
+2. Install PostgreSQL version 12.7
+3. Install Node.JS and in case of need every dependency (Carbone, Cors, Express, FS, HTTP, Nodemon, pg, socket.io)
+
+Be careful : 
+- My path is always based on the localhost (127.0.0.1) you might need to change it based on your configuration
+- PostgreSQL : I connect via the port 5432 and with my own identifiers) (file "js/queries.js" (line 5 to 9)). 
+- Socket.io : I use the port 3000 (file "js/game_manager.js" (line 1) and "node.js" (line 83))
+
+4. Use the "pgsql_dump.sql" file at the root of this project to import the complete database structure
+5. Go to localhost/easilys and everything should be fine !
+
+The project must be included in an "Easilys" folder, an absolute path is used to generate reports (a new functionality I implemented !)
+If you prefer to change the path to fit your needs it's located in the "node.js" file line 61 : 
+> res.send('http://localhost/easilys/reports/table-'+ts+'.docx');
+
+## Bonus
+I decided to implement several new elements to innovate and go further in the subject. 
+1. A fully responsive site, indeed given the growing presence of phones in our lives it seems unthinkable to make a site that does not adapt well on phone or tablet.
+2. The possibility for each game to associate a time, when a game is created a start time is assigned, when it ends (you have to click on the red button next to "In progress" to stop a game) it takes an end time
+3. Scores, each match associates two players who confront each other, from now on these players can add or remove points directly from the platform.
+4. The chat that allows anyone on the site to choose their nickname or remain anonymous and talk to other users.
+5. The design is completely different from the initial mockup, any idea is welcome as specified in the project subject. Moreover the table can "change its format" by displaying only the current games if the user wants or a disclaimer if there is no game at all in the database, the counter is in the bottom left corner of the table.
+6. The last  - but not least - feature was to reuse Carbone.io, a tool developed by Easilys, in order to allow users to download a report containing the list of parts present in the table. I took the time to create a specific template to meet our needs.
+
+## Preview
+![image](https://user-images.githubusercontent.com/44434162/127777651-932a05d4-255f-4f7e-9638-4f5accadb58c.png)
