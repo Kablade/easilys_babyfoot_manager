@@ -63,6 +63,20 @@ If you prefer to change the path to fit your needs it's located in the "node.js"
 res.send('http://localhost/easilys/reports/table-'+ts+'.docx');
 ```
 
+Once you are done with the installation you can enter the name of the players and create as much game as you want. 
+
+The table shows the state of the game, date of beginning / ending, the score and name of each player.
+
+The state of the game is "En cours" when you create it but you can stop a game by pressing the red square next to the "En cours" label.
+
+You can increase or decrease the score by pressing the plus and minus signs.
+
+Another possibility is to delete the game thanks to the trash icon next to it.
+
+To export the table, you just have to click on the button under it, everything else will be automatic thanks to Carbone.io !
+
+Finally, you can set up an username and chat with any user on the website, in real time, by writing what you want to say in the textarea and pressing the "plane" icon next to it.
+
 ## 3. Path explanation
 - css -> style (front-end) related document
 - documentation -> contains the subject
