@@ -50,7 +50,32 @@ Be careful :
 
 The project must be included in an "Easilys" folder, an absolute path is used to generate reports (a new functionality I implemented !)
 If you prefer to change the path to fit your needs it's located in the "node.js" file line 61 : 
-> res.send('http://localhost/easilys/reports/table-'+ts+'.docx');
+```javascript
+res.send('http://localhost/easilys/reports/table-'+ts+'.docx');
+```
+
+## Path explanation
+- css -> style (front-end) related document
+- documentation -> contains the subject
+- js -> Game and chat management (game_manager.js & websoccket.js), plus interactions with the database (queries.js)
+- node_modules -> Contains every node module I used
+- pgsql_dump -> In order to replicate my database you will find a dump of the database structure, you can of course simply retrieve the table but the database name needs to be babyfoot_manager unless you modify it in queries.js
+```sql 
+CREATE TABLE public.babyfoot_games (
+    id integer NOT NULL,
+    "timestamp" time(0) without time zone DEFAULT now() NOT NULL,
+    player1 text NOT NULL,
+    score1 integer DEFAULT 0 NOT NULL,
+    player2 text NOT NULL,
+    score2 integer DEFAULT 0 NOT NULL,
+    current_state text DEFAULT 'En cours'::text NOT NULL,
+    timestamp_end time(0) without time zone,
+    CONSTRAINT score_verification CHECK (((score1 > '-1'::integer) AND (score2 > '-1'::integer)))
+);
+```
+- reports -> Reports generated with Carbone.io
+- index.html -> The webpage
+- node.js -> The heart of my work
 
 ## Bonus
 I decided to implement several new elements to innovate and go further in the subject. 
@@ -63,3 +88,7 @@ I decided to implement several new elements to innovate and go further in the su
 
 ## Preview
 ![image](https://user-images.githubusercontent.com/44434162/127777651-932a05d4-255f-4f7e-9638-4f5accadb58c.png)
+
+## Video
+If you can't install my realization on your configuration I have prepared a video to show the result of my technical test :
+https://www.youtube.com/watch?v=4_s5rmn0sRM
