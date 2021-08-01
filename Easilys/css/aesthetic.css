@@ -1,0 +1,86 @@
+body{
+  font-family: sans-serif;
+  background-color: #546e7a;
+}
+
+
+h1{
+  font-size: 3em;
+  color:white;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+/* Color utilities : */
+.red{
+  color:red;
+}
+
+.green{
+  color:green;
+}
+
+.bg-cyan{
+  background-color: cyan;
+}
+
+.white{
+  color:white;
+}
+
+.darken-red{
+  background-color: rgb(150,0,0);
+  border:2px solid rgb(150,0,0);
+}
+
+.fg-white{
+  color:white;
+}
+
+.bg-darkgrey{
+  background-color: rgba(10, 10, 10, 0.6);
+}
+
+.bg-lightblack{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Aesthetic */
+
+.strong-emphasize{
+  font-size: 1.5em;
+  margin: 0px .7em;
+  font-weight: 700;
+}
+
+.emphasize{
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.hover{
+  cursor: pointer;
+}
+
+.hover-ban{
+  cursor:not-allowed;
+}
+
+.square{
+  border-radius: 5px;
+}
+
+.rounded{
+  border-radius:30px;
+}
+
+.center{
+  text-align: center;
+}
+
+input[type="submit"]{
+  cursor: pointer;
+  background-color: #188ffb;
+  border-color:#188ffb;
+  border-radius: 2px;
+}

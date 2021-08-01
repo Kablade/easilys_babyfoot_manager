@@ -1,0 +1,50 @@
+.games{
+    width:70%;
+    border: none;
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: .8rem;
+}
+
+.games caption {
+    padding: 10px;
+    caption-side: bottom;
+    text-align: left;
+}
+
+.games tbody td{
+    padding: 5px 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.games thead tr{
+  background-color: rgba(10, 10, 10, 0.6);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.games tbody tr{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.games tr{
+  height:4em;
+  text-align: center;
+  color:white;
+}
+
+
+/* Export the table */
+
+#export-container{
+  text-align: center;
+}
+
+.export-button{
+  padding:0.8em 1.2em;
+}
+
+.export-button a{
+  color:blue;
+}

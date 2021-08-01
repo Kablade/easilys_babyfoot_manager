@@ -1,0 +1,25 @@
+{
+  "name": "easilys",
+  "version": "1.0.0",
+  "description": "NodeJS Database communication for Babyfoot Manager",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Database",
+    "babyfoot"
+  ],
+  "author": "Tanguy Lhinares",
+  "license": "ISC",
+  "dependencies": {
+    "carbone": "^3.2.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1",
+    "socket.io": "^4.1.3"
+  }
+}

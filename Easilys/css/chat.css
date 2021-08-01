@@ -1,0 +1,83 @@
+#chat-container{
+  height:30%;
+  width:70%;
+  border:none;
+  margin:2em 15%;
+  display:flex;
+  flex-direction: column;
+  border: 4px solid rgba(10, 10, 10, 0.6);
+}
+
+#chat-container h2{
+  text-align: center;
+  padding:.6em;
+  z-index: 3;
+  font-size: 2em;
+  margin:0px;
+}
+
+#chat-messages-container{
+  border: 2px solid rgba(10, 10, 10, 0.6);
+  width:100%;
+}
+
+#chat-messages-container p{
+  color:white;
+  padding:.7em;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.user-message:nth-child(2n){
+  background-color: rgb(163,0,0);
+}
+
+.user-message:nth-child(2n-1){
+  background-color: rgb(120,0,0);
+}
+
+#chat-table{
+  width:100%;
+}
+
+/* Part for writing & sending the messages */
+#user{
+  border:none;
+  padding:.7em 2px;
+  font-size: 1.2em;
+  outline:none;
+  width:100%;
+  background-color: #819ca9;
+}
+
+
+#chat-sender{
+  height:20%;
+  width: 100%;
+  border: 2px solid rgba(10, 10, 10, 0.6);
+}
+
+#chat-sender textarea{
+  resize:none;
+  font-size: 1.2em;
+  border:none;
+  padding:.7em 2px;
+  background-color: #819ca9;
+  width:100%;
+  outline:none;
+  color:white;
+  font-family: sans-serif;
+}
+
+#chat-sender button{
+  width:100%;
+  color:rgb(150,0,0);
+  font-size: 2em;
+  background-color: transparent;
+  border:none;
+  vertical-align: middle;
+}
+
+#button-cell{
+  width:10%;
+}
