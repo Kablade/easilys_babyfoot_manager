@@ -1,8 +1,17 @@
 # Babyfoot Manager - Easilys
 
-This project was realized within the framework of a technical test for the company Easilys, having for goal to set up a platform of "management" for games of table soccer.
+This project was realized within the framework of a technical test for the company Easilys, having for goal to set up a platform to manage games of table soccer.
 
-## Technical subject
+## Summary
+
+ 1. Technical presentation of the subject
+ 2. Installation & Reproduction
+ 3. Path explanation
+ 4. Bonus
+ 5. Preview
+ 6. Video
+
+## 1. Technical presentation of the subject
 The goal was to create a management website for collaborative table soccer games
 
 The features were :
@@ -34,7 +43,7 @@ To be able to achieve the required goal I used POSTGRESQL to store the data of e
 
 To allow a user to be on the site without any reloading I used the Ajax protocol and the authorized library WebSocket.io
 
-## Installation
+## 2. Installation & Reproduction
 Steps to reproduce my realization : 
 1. Clone this repository on your computer on a folder named Easilys
 2. Install PostgreSQL version 12.7
@@ -54,7 +63,7 @@ If you prefer to change the path to fit your needs it's located in the "node.js"
 res.send('http://localhost/easilys/reports/table-'+ts+'.docx');
 ```
 
-## Path explanation
+## 3. Path explanation
 - css -> style (front-end) related document
 - documentation -> contains the subject
 - js -> Game and chat management (game_manager.js & websoccket.js), plus interactions with the database (queries.js)
@@ -77,7 +86,7 @@ CREATE TABLE public.babyfoot_games (
 - index.html -> The webpage
 - node.js -> The heart of my work
 
-## Bonus
+## 4. Bonus
 I decided to implement several new elements to innovate and go further in the subject. 
 1. A fully responsive site, indeed given the growing presence of phones in our lives it seems unthinkable to make a site that does not adapt well on phone or tablet.
 2. The possibility for each game to associate a time, when a game is created a start time is assigned, when it ends (you have to click on the red button next to "In progress" to stop a game) it takes an end time
@@ -86,9 +95,9 @@ I decided to implement several new elements to innovate and go further in the su
 5. The design is completely different from the initial mockup, any idea is welcome as specified in the project subject. Moreover the table can "change its format" by displaying only the current games if the user wants or a disclaimer if there is no game at all in the database, the counter is in the bottom left corner of the table.
 6. The last  - but not least - feature was to reuse Carbone.io, a tool developed by Easilys, in order to allow users to download a report containing the list of parts present in the table. I took the time to create a specific template to meet our needs.
 
-## Preview
+## 5. Preview
 ![image](https://user-images.githubusercontent.com/44434162/127777651-932a05d4-255f-4f7e-9638-4f5accadb58c.png)
 
-## Video
+## 6. Video
 If you can't install my realization on your configuration I have prepared a video to show the result of my technical test :
 https://www.youtube.com/watch?v=4_s5rmn0sRM
