@@ -101,3 +101,5 @@ I decided to implement several new elements to innovate and go further in the su
 ## 6. Video
 If you can't install my realization on your configuration I have prepared a video to show the result of my technical test :
 https://www.youtube.com/watch?v=4_s5rmn0sRM
+
+[![Alt text](https://img.youtube.com/vi/4_s5rmn0sRM/0.jpg)](https://www.youtube.com/watch?v=4_s5rmn0sRM)
